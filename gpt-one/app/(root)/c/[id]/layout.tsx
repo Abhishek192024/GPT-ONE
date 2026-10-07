@@ -1,21 +1,10 @@
-import { onBoard } from '@/features/auth/action/onboard';
-import { ChatShell } from '@/features/coversation/components/chat-shell';
-import { auth } from '@clerk/nextjs/server'
 import React from 'react'
 
 /**
- * Authenticated app layout — protects routes, syncs user to DB, and wraps content in `ChatShell`.
+ * Conversation route layout. The parent `(root)` layout already renders the authenticated shell.
  */
 const RootGrouplayout = async ({ children }: { children: React.ReactNode }) => {
-
-    await auth.protect();
-    await onBoard();
-
-    return (
-        <ChatShell>
-            {children}
-        </ChatShell>
-    )
+    return children
 }
 
 export default RootGrouplayout

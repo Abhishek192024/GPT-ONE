@@ -1,14 +1,14 @@
-import { startNewChat } from '@/features/home/actions/start-new-chat'
-import { redirect } from 'next/navigation'
+import { ConversationView } from "@/features/coversation/components/conversation-view";
+import { loadChatMessages } from "@/features/ai/actions/chat-store";
 
 /**
- * Home page — creates a new chat and redirects to `/c/{id}`.
+ * Conversation page — renders the selected chat.
  */
-const page = async() => {
-  const conversationId = await startNewChat()
-  
-  
-  redirect(`/c/${conversationId}`)
-}
+const page = async ({ params }: PageProps<"/c/[id]">) => {
+  const { id } = await params;
+  const initialMessages = await loadChatMessages(id);
 
-export default page
+  return <ConversationView conversationId={id} initialMessages={initialMessages} />;
+};
+
+export default page;

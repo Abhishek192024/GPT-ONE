@@ -63,7 +63,7 @@ export function AppSidebar() {
     : undefined;
 
   return (
-    <Sidebar collapsible="icon" variant="inset">
+    <Sidebar collapsible="icon" variant="inset" className="z-30">
       <SidebarHeader className="gap-2">
         <SidebarMenu>
           <SidebarMenuItem>
