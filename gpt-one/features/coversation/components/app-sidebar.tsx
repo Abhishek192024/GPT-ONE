@@ -40,7 +40,7 @@ import {
   useConversations,
   useDeleteConversation,
   useUpdateConversation,
-} from "@/features/conversation/hooks/use-conversation";
+} from "@/features/coversation/hooks/use-conversation";
 import { cn } from "@/lib/utils";
 
 type Conversation = NonNullable<

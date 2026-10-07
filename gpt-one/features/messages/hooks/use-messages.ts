@@ -1,8 +1,8 @@
 "use client";
 
-import { queryKeys } from "@/features/conversation/utils/query-keys";
+import { queryKeys } from "@/features/coversation/utils/query-keys";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { toast } from "sonner";
+import { toast } from "@/components/ui/toast";
 import { createMessage, deleteMessage, listMessages, updateMessage } from "../actions/messages-action";
 
 

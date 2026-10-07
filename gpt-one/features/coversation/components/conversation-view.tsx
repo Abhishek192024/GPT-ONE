@@ -7,7 +7,7 @@ import { useChat } from "@ai-sdk/react"
 import React, { useMemo } from 'react'
 import { useConversations } from '../hooks/use-conversation';
 import { queryKeys } from '../utils/query-keys';
-import { toast } from 'sonner';
+import { toast } from '@/components/ui/toast';
 import { ChatEmpty } from './chat-empty';
 import { ChatMessages } from './chat-messages';
 import { ChatComposer } from './chat-composer';

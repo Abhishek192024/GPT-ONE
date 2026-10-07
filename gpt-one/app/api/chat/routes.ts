@@ -1,9 +1,9 @@
 import { loadChatMessages, saveChatMessages } from "@/features/ai/actions/chat-store";
-import { getChatModel } from "@/features/ai/utils/model";
+import { getChatModel } from "@/features/ai/utiles/model";
 import { requireUser } from "@/features/auth/action/require-user";
 import { prisma } from "@/lib/db";
 import { auth } from "@clerk/nextjs/server";
-import { convertToModelMessages, createIdGenerator, createUIMessageStream, createUIMessageStreamResponse, streamText, toUIMessageStream, type UIMessage } from "ai";
+import { convertToModelMessages, createIdGenerator, createUIMessageStreamResponse, streamText, toUIMessageStream, type UIMessage } from "ai";
 /**
  * POST /api/chat — Streams an AI assistant reply for a conversation.
  *

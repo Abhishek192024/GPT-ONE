@@ -54,7 +54,7 @@ export function ChatMessages({ messages, status }: ChatMessagesProps) {
           </Message>
         ) : null}
       </ConversationContent>
-   
+      <ConversationScrollButton />
     </Conversation>
   );
 }

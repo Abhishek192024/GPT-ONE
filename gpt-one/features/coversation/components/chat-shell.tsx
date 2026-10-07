@@ -1,6 +1,6 @@
 "use client";
 
-import { AppSidebar } from "@/features/conversation/components/app-sidebar";
+import { AppSidebar } from "@/features/coversation/components/app-sidebar";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 
 /**
